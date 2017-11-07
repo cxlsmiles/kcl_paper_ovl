@@ -1,0 +1,167 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This is a (brief) model paper using the achemso class
+%% The document class accepts keyval options, which should include
+%% the target journal and optionally the manuscript type.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[journal=jacsat,manuscript=suppinfo]{achemso}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Place any additional packages needed here.  Only include packages
+%% which are essential, to avoid problems later. Do NOT use any
+%% packages which require e-TeX (for example etoolbox): the e-TeX
+%% extensions are not currently available on the ACS conversion
+%% servers.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[version=3]{mhchem} % Formula subscripts using \ce{}
+\usepackage[T1]{fontenc}       % Use modern font encodings
+
+\usepackage{color}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% If issues arise when submitting your manuscript, you may want to
+%% un-comment the next line.  This provides information on the
+%% version of every file you have used.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\listfiles
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Place any additional macros here.  Please use \newcommand* where
+%% possible, and avoid layout-changing macros (which are not used
+%% when typesetting).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand*\mycommand[1]{\texttt{\emph{#1}}}
+
+\newcommand{\cli}{Cl$^{-}$}
+\newcommand{\ki}{K$^{+}$}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Meta-data block
+%% ---------------
+%% Each author should be given as a separate \author command.
+%%
+%% Corresponding authors should have an e-mail given after the author
+%% name as an \email command. Phone and fax numbers can be given
+%% using \phone and \fax, respectively; this information is optional.
+%%
+%% The affiliation of authors is given after the authors; each
+%% \affiliation command applies to all preceding authors not already
+%% assigned an affiliation.
+%%
+%% The affiliation takes an option argument for the short name.  This
+%% will typically be something like "University of Somewhere".
+%%
+%% The \altaffiliation macro should be used for new address, etc.
+%% On the other hand, \alsoaffiliation is used on a per author basis
+%% when authors are associated with multiple institutions.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{T. Miteva}
+\affiliation{Sorbonne Universit\'{e}s, UPMC Univ Paris 06, UMR 7614, Laboratoire de Chimie Physique Mati\`{e}re et Rayonnement, F-75005 Paris, France}
+
+\author{N. Kryzhevoi}
+\affiliation{Theoretische Chemie, Physikalisch-Chemisches Institut, Universit\"at Heidelberg, Im Neuenheimer Feld 229, D-69120 Heidelberg, Germany}
+
+\author{N. Sisourat}
+\affiliation{Sorbonne Universit\'{e}s, UPMC Univ Paris 06, UMR 7614, Laboratoire de Chimie Physique Mati\`{e}re et Rayonnement, F-75005 Paris, France}
+
+\author{{\color{red}Kirill ?}}
+\affiliation{Theoretische Chemie, Physikalisch-Chemisches Institut, Universit\"at Heidelberg, Im Neuenheimer Feld 229, D-69120 Heidelberg, Germany}
+
+\author{{\color{red}N. Kosugi}}
+\affiliation{Institute for Molecular Science, Myodaiji, Okazaki 444-8585, Japan}
+
+\author{Ch. Nicolas}
+\affiliation{Sorbonne Universit\'{e}s, UPMC Univ Paris 06, UMR 7614, Laboratoire de Chimie Physique Mati\`{e}re et Rayonnement, F-75005 Paris, France}
+
+\author{W. Pokapanich}
+\affiliation{Sorbonne Universit\'{e}s, UPMC Univ Paris 06, UMR 7614, Laboratoire de Chimie Physique Mati\`{e}re et Rayonnement, F-75005 Paris, France}
+
+\author{Th. Saisopa}
+\affiliation{Sorbonne Universit\'{e}s, UPMC Univ Paris 06, UMR 7614, Laboratoire de Chimie Physique Mati\`{e}re et Rayonnement, F-75005 Paris, France}
+
+\author{P. Songsiriritthigul}
+\affiliation{Sorbonne Universit\'{e}s, UPMC Univ Paris 06, UMR 7614, Laboratoire de Chimie Physique Mati\`{e}re et Rayonnement, F-75005 Paris, France}
+
+\author{Y. Rattanachai}
+\affiliation{Sorbonne Universit\'{e}s, UPMC Univ Paris 06, UMR 7614, Laboratoire de Chimie Physique Mati\`{e}re et Rayonnement, F-75005 Paris, France}
+
+\author{A. Dreuw}
+\affiliation{Interdisciplinary Center for Scientific Computing, Ruprecht-Karls University, Im Neuenheimer Feld 205A, D-69120 Heidelberg, Germany}
+
+\author{J. Wenzel}
+\affiliation{Interdisciplinary Center for Scientific Computing, Ruprecht-Karls University, Im Neuenheimer Feld 205A, D-69120 Heidelberg, Germany}
+
+\author{M. Zitnik}
+\affiliation{Sorbonne Universit\'{e}s, UPMC Univ Paris 06, UMR 7614, Laboratoire de Chimie Physique Mati\`{e}re et Rayonnement, F-75005 Paris, France}
+
+\author{R. P\"{u}ttner}
+\affiliation{Sorbonne Universit\'{e}s, UPMC Univ Paris 06, UMR 7614, Laboratoire de Chimie Physique Mati\`{e}re et Rayonnement, F-75005 Paris, France}
+
+\author{J. Palaudoux}
+\affiliation{Sorbonne Universit\'{e}s, UPMC Univ Paris 06, UMR 7614, Laboratoire de Chimie Physique Mati\`{e}re et Rayonnement, F-75005 Paris, France}
+
+\author{G. \"{O}hrwall}
+\affiliation{Sorbonne Universit\'{e}s, UPMC Univ Paris 06, UMR 7614, Laboratoire de Chimie Physique Mati\`{e}re et Rayonnement, F-75005 Paris, France}
+
+\author{J.P. Rueff}
+\affiliation{Sorbonne Universit\'{e}s, UPMC Univ Paris 06, UMR 7614, Laboratoire de Chimie Physique Mati\`{e}re et Rayonnement, F-75005 Paris, France}
+\affiliation{Synchrotron SOLEIL, l`Orme des Merisiers, Saint-Aubin, F-91192 Gif-sur-Yvette Cedex, France}
+
+\author{D. C\'{e}olin}
+\email{denis.ceolin@synchrotron-soleil.fr}
+\affiliation{Synchrotron SOLEIL, l`Orme des Merisiers, Saint-Aubin, F-91192 Gif-sur-Yvette Cedex, France}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The document title should be given as usual. Some journals require
+%% a running title from the author: this should be supplied as an
+%% optional argument to \title.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[]
+  {RAS + XAS study of KCl aqueous solution}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Some journals require a list of abbreviations or keywords to be
+%% supplied. These should be set up here, and will be printed after
+%% the title and author information, if needed.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\abbreviations{AES,XAS}
+\keywords{Solvated metal ions, Auger spectroscopy, X-ray absorption spectroscopy}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The manuscript does not need to include \maketitle, which is
+%% executed automatically.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+
+\begin{figure}
+\centering
+\includegraphics[scale=1.0]{figures/rad_dens_kcl.eps}
+\caption{Radial density distributions of the singly-occupied natural orbital occupied by the excited electron corresponding to the 1s$\rightarrow$4p, 1s$\rightarrow$3d and 1s$\rightarrow$5p core excitations in \ki~and \cli. The insets show the region of distances relevant for the overlap with the 1s core orbital whose radial density is shown as a grey shaded area.}
+\label{fg:rdens_ions}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale=1.0]{figures/sfg_intensity_ratio.png}
+\caption{XXX}
+\label{fg:intensity_ratio}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale=1.0]{figures/k_2p4_4p5p_rad_dens.eps}
+\caption{Radial density distribution of the natural orbital occupied by the excited electron in the K$^{3+}$(2p$^{-2}$4p) (red) and K$^{3+}$(2p$^{-2}$5p) (green) states. The grey shaded area between 2.5\,\AA~and 3.0\,\AA~corresponds to the range of K-O distances {\color{red}in the optimized structures}.}
+\label{fg:k_2p4nl_raddens}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The appropriate \bibliography command should be placed here.
+%% Notice that the class file automatically sets \bibliographystyle
+%% and also names the section correctly.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\bibliography{F:/Articles/biblography/Bibliography}
+
+\end{document}
